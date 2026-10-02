@@ -492,20 +492,11 @@ body {
 }
 
 .team-section .section-heading {
-/* Gallery Section */
-
-.gallery-section {
-    padding: 70px 0;
-    background-color: #f8fafc;
-}
-
-.gallery-section .section-heading {
     text-align: center;
     margin-bottom: 40px;
 }
 
 .team-section .section-label {
-.gallery-section .section-label {
     margin-bottom: 10px;
     color: #2563eb;
     font-size: 0.85rem;
@@ -514,7 +505,6 @@ body {
 }
 
 .team-section .section-heading h2 {
-.gallery-section .section-heading h2 {
     margin-bottom: 10px;
     color: #111827;
     font-size: 2rem;
@@ -525,11 +515,6 @@ body {
 }
 
 .team-grid {
-.gallery-section .section-heading p:not(.section-label) {
-    color: #6b7280;
-}
-
-.gallery-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 25px;
@@ -539,9 +524,6 @@ body {
     padding: 25px;
     text-align: center;
     background-color: #f8fafc;
-.gallery-item {
-    overflow: hidden;
-    background-color: white;
     border: 1px solid #e5e7eb;
     border-radius: 10px;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
@@ -567,16 +549,51 @@ body {
     font-size: 0.95rem;
 }
 
-@media (max-width: 900px) {
-    .team-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
+
+/* Gallery Section */
+
+.gallery-section {
+    padding: 70px 0;
+    background-color: #f8fafc;
 }
 
-@media (max-width: 650px) {
-    .team-grid {
-        grid-template-columns: 1fr;
-    }
+.gallery-section .section-heading {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.gallery-section .section-label {
+    margin-bottom: 10px;
+    color: #2563eb;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.gallery-section .section-heading h2 {
+    margin-bottom: 10px;
+    color: #111827;
+    font-size: 2rem;
+}
+
+.gallery-section .section-heading p:not(.section-label) {
+    color: #6b7280;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.gallery-item {
+    overflow: hidden;
+    background-color: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
 .gallery-item img {
     width: 100%;
     height: 230px;
@@ -590,20 +607,24 @@ body {
 }
 
 
-/* Gallery Responsive */
+/* Responsive */
 
 @media (max-width: 900px) {
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 
     .gallery-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-
 }
 
 @media (max-width: 650px) {
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
 
     .gallery-grid {
         grid-template-columns: 1fr;
     }
-
 }
